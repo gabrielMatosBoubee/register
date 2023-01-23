@@ -20,16 +20,21 @@ function Login(props) {
 
     return (
         <div>
-            <Formik initialValues={{email: ''}} validationSchema={SignupSchema}>
+            <Formik 
+            initialValues={
+              { email: '', password: ''}
+              } validationSchema={SignupSchema}>
               {formik => (
               <Form>
-                {/* <label htmlFor="">
-                  email */}
-                  {/* <Field type='email' name='email' placeholder='email' */}
+                <label htmlFor="">
+                  email
                    <Field type="email" name="email" placeholder="Email" />
-                  {/* // onChange={formik.handleChange} */}
-                  {/* /> */}
-                {/* </label> */}
+                </label>
+                <label htmlFor=''>
+                  password
+                  <Field type="password" name="password" placeholder="password" />
+                </label>
+                <button>Login</button>
               </Form>
                   )}
             </Formik>
