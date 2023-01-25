@@ -1,6 +1,7 @@
 import React from 'react';
 import { Form, Formik, useFormik, Field } from 'formik';
 import * as Yup from 'yup';
+import styles from '../styles/input.module.css'
 
 function Login(props) {
    
@@ -28,7 +29,10 @@ function Login(props) {
               <Form>
                 <label htmlFor="">
                   email
-                   <Field type="email" name="email" placeholder="Email" />
+                   <Field 
+                    className={styles.input}
+                    type="email" name="email"
+                    placeholder="Email" />
                 </label>
                 <label htmlFor=''>
                   password
